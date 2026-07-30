@@ -1,0 +1,14 @@
+{
+  "name": "terraform-rate-limiter",
+  "description": "terraform rate limiter implementation",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bun-types": "^1.0.0"
+  }
+}
