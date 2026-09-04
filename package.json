@@ -1,14 +1,43 @@
 {
   "name": "terraform-rate-limiter",
-  "description": "terraform rate limiter implementation",
+  "description": "Rate-limit Terraform Cloud/Enterprise API requests and arbitrary shell commands with token-bucket, leaky-bucket, and fixed-window strategies, plus automatic 429 retry/backoff.",
   "version": "1.0.0",
   "type": "module",
+  "license": "MIT",
+  "author": "Retsumdk",
+  "keywords": [
+    "terraform",
+    "rate-limiter",
+    "token-bucket",
+    "leaky-bucket",
+    "fixed-window",
+    "terraform-cloud",
+    "terraform-enterprise",
+    "429",
+    "retry",
+    "backoff",
+    "api"
+  ],
+  "bin": {
+    "terraform-rate-limiter": "src/index.ts"
+  },
   "scripts": {
     "test": "bun test",
-    "build": "tsc"
+    "build": "bunx tsc --noEmit",
+    "typecheck": "bunx tsc --noEmit",
+    "start": "bun src/index.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^15.0.0"
+  },
   "devDependencies": {
     "bun-types": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Retsumdk/terraform-rate-limiter.git"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
   }
 }
